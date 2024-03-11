@@ -597,52 +597,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, 250);
         } 
         else if(buttonValue == 'Medicaid'){
-          $('#agentBlock5 .agent-chat').prepend(typingEffect());
+          $('#agentBlock4 .agent-chat').prepend(typingEffect());
         $('#msg11').addClass('hidden');
         $('#userBlock3').removeClass('hidden');
-          $('#msg12medicaid').removeClass('hidden');
-          $('#hdnApprovalStatus').val('no');
+          $('#msg12no').removeClass('hidden');
           if($('#hdnApprovalStatus').val() == 'no'){
           //downsell
-          $('#DownsellNumberq').removeClass('hidden');
+          $('#DownsellNumber').removeClass('hidden');
           var script = document.createElement('script');
           script.src = 'http://b-js.ringba.com/CAce87ab953d1047f5906492e50ebecfc7';
           document.head.appendChild(script);
-          $('#msg14disapprovedq').removeClass('hidden');
-          $('#msg16disapprovedq').removeClass('hidden');
+          $('#msg14disapproved').removeClass('hidden');
+          $('#msg16disapproved').removeClass('hidden');
         } else {
           //standard aca
-          $('#PrimaryNumberq').removeClass('hidden');
+          $('#PrimaryNumber').removeClass('hidden');
           var script = document.createElement('script');
           script.src = 'http://b-js.ringba.com/CA265c12c4178f4529af85c14bcf70ad42';
           document.head.appendChild(script);
-          $('#msg14approvedq').removeClass('hidden');
-          $('#msg16approvedq').removeClass('hidden');
+          $('#msg14approved').removeClass('hidden');
+          $('#msg16approved').removeClass('hidden');
         }
         scrollToBottom();
         //
         setTimeout(function(){
-          $('#agentBlock5').removeClass('hidden');
+          $('#agentBlock4').removeClass('hidden');
           scrollToBottom();
           setTimeout(function(){
             $('.temp-typing').remove();
-            $('#msg13q').removeClass('hidden').after(typingEffect());
+            $('#msg13').removeClass('hidden').after(typingEffect());
             scrollToBottom();
             setTimeout(function(){
               $('.temp-typing').remove();
-              // $('#msg14q').removeClass('hidden').after(typingEffect());
+              $('#msg14').removeClass('hidden').after(typingEffect());
               scrollToBottom();
               setTimeout(function(){
                 $('.temp-typing').remove();
-                $('#msg15q').removeClass('hidden').after(typingEffect());
+                $('#msg15').removeClass('hidden').after(typingEffect());
                 scrollToBottom();
                 setTimeout(function(){
                   $('.temp-typing').remove();
-                  $('#msg16q').removeClass('hidden').after(typingEffect());
+                  $('#msg16').removeClass('hidden').after(typingEffect());
                   scrollToBottom();
                   setTimeout(function(){
                     $('.temp-typing').remove();
-                    $('#msg17q').removeClass('hidden');
+                    $('#msg17').removeClass('hidden');
                     //$('#tcpa').removeClass('hidden');
                     scrollToBottom();
                   }, 0);
@@ -651,6 +650,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }, 1750);
           }, 1250);
         }, 250);
+        
+        
+   
         } 
         else if (buttonValue == 'Medicare'){
           $('#agentBlock6 .agent-chat').prepend(typingEffect());
